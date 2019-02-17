@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <left>
+      <Pane prefHeight="675.0" prefWidth="197.0" style="-fx-background-color: #CBBEB5;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="17.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/circle2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="38.0" layoutX="13.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/BAR.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="50.0" layoutX="8.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/apoyos/movilHor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="103.0" fitWidth="33.0" layoutX="15.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/right-arrow.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="336.0" prefWidth="197.0" spacing="15.0">
+               <children>
+                  <JFXButton focusTraversable="false" onAction="#Nodos_pulsado" prefHeight="43.0" prefWidth="200.0" ripplerFill="WHITESMOKE" text="    Nodos" textFill="#6e5f5f">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton focusTraversable="false" layoutX="10.0" layoutY="10.0" onAction="#Barras_pulsado" prefHeight="43.0" prefWidth="200.0" ripplerFill="WHITESMOKE" text="    Barras" textFill="#6e5f5f">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton focusTraversable="false" layoutX="10.0" layoutY="75.0" onAction="#Apoyos_pulsado" prefHeight="65.0" prefWidth="200.0" ripplerFill="WHITESMOKE" text="    Apoyos" textAlignment="CENTER" textFill="#6e5f5f">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton focusTraversable="false" layoutX="10.0" layoutY="140.0" onAction="#Cargas_pulsado" prefHeight="43.0" prefWidth="200.0" ripplerFill="WHITESMOKE" text="    Cargas" textFill="#6e5f5f">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <Pane layoutX="1.0" layoutY="333.0" prefHeight="67.0" prefWidth="227.0" style="-fx-background-color: #FF6666; -fx-background-radius: 5;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="0.0" radius="0.0" width="0.0" />
+               </effect>
+               <children>
+                  <JFXButton focusTraversable="false" onAction="#Calcular_pulsado" prefHeight="65.0" prefWidth="228.0" ripplerFill="WHITESMOKE" text="Calcular" textFill="WHITESMOKE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="1.0" layoutY="416.0" prefHeight="193.0" prefWidth="277.0" style="-fx-background-color: #F5F5DC; -fx-background-radius: 8;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="350.0">
+                     <children>
+                        <JFXButton focusTraversable="false" layoutX="2.0" onAction="#Desplazamientos_pulsado" prefHeight="65.0" prefWidth="277.0" ripplerFill="WHITESMOKE" style="-fx-background-radius: 8;" text="Desplazamientos" textFill="#333333">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" layoutX="10.0" layoutY="10.0" onAction="#Esfuerzos_pulsado" prefHeight="65.0" prefWidth="277.0" ripplerFill="WHITESMOKE" text="Esfuerzos" textFill="#333333">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" layoutX="10.0" layoutY="75.0" onAction="#Reacciones_pulsado" prefHeight="65.0" prefWidth="277.0" ripplerFill="WHITESMOKE" text="Reacciones" textFill="#333333">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="0.0" radius="0.0" width="0.0" />
+               </effect>
+            </Pane>
+            <JFXToggleButton fx:id="Slider" focusTraversable="false" layoutY="609.0" onAction="#DibujarDesplazadosPulsado" text="Ver desplazamientos" textFill="#363636" toggleColor="#bc2a2a" toggleLineColor="#eb737f" unToggleColor="WHITE" unToggleLineColor="#cdcdcd">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXToggleButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </left>
+   <top>
+      <MenuBar focusTraversable="false" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Abrir" text="Abrir" />
+                  <MenuItem mnemonicParsing="false" onAction="#Guardar" text="Guardar como" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Borrar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane fx:id="panelDibujo" minHeight="612.0" minWidth="713.0" prefHeight="612.0" prefWidth="713.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" left="130.0" right="40.0" top="40.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <StackPane fx:id="stackPane" layoutX="191.0" layoutY="244.0" prefHeight="113.0" prefWidth="294.0" />
+            <Text fx:id="texto2" layoutX="33.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tracción" wrappingWidth="66.87890625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="texto1" layoutX="34.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compresión">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Circle fx:id="bola1" fill="#5cb85c" layoutX="16.0" layoutY="17.0" radius="8.0" stroke="#5cb85c" strokeType="INSIDE" />
+            <Circle fx:id="bola2" fill="#5bc0de" layoutX="16.0" layoutY="40.0" radius="8.0" stroke="#5bc0de" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

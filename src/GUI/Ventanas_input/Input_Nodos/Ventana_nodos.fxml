@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="386.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Ventanas_input.Input_Nodos.Controller">
+    <children>
+        <Text layoutX="193.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coordenada X" />
+        <Text layoutX="284.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coordenada Y" />
+        <JFXTextField fx:id="XTF" layoutX="202.0" layoutY="55.0" prefHeight="25.0" prefWidth="58.0" />
+        <JFXButton fx:id="añadirBT" layoutX="203.0" layoutY="127.0" onAction="#anadirpulsado" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #CBBEB5;" text="Añadir">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <font>
+                <Font size="15.0" />
+            </font></JFXButton>
+        <JFXTextField fx:id="YTF" layoutX="293.0" layoutY="55.0" prefHeight="25.0" prefWidth="58.0" />
+        <JFXButton fx:id="borrarBT" layoutX="288.0" layoutY="127.0" onAction="#borrarpulsado" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #CBBEB5;" text="Borrar">
+            <font>
+                <Font size="15.0" />
+            </font></JFXButton>
+        <TableView fx:id="Tabla" prefHeight="273.0" prefWidth="167.0" style="-fx-background-color: #F0F8FF;">
+            <columns>
+                <TableColumn fx:id="XCL" editable="false" prefWidth="82.0" text="X" />
+                <TableColumn fx:id="YCL" editable="false" prefWidth="83.0" text="Y" />
+            </columns>
+        </TableView>
+      <JFXButton layoutX="240.0" layoutY="189.0" onAction="#guardarpulsado" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #CBBEB5;" text="Guardar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

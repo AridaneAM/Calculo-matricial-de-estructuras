@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="408.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Ventanas_input.Input_Barras.Controller">
+   <children>
+      <Text layoutX="312.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Área" />
+      <Text layoutX="216.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elasticidad" />
+      <Text layoutX="136.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nodo final" />
+      <Text layoutX="52.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nodo inicial" />
+      <JFXTextField fx:id="areaTF" layoutX="295.0" layoutY="62.0" prefHeight="25.0" prefWidth="58.0" />
+      <JFXTextField fx:id="elasticidadTF" layoutX="215.0" layoutY="62.0" prefHeight="25.0" prefWidth="58.0" />
+      <JFXTextField fx:id="nfTF" layoutX="135.0" layoutY="62.0" prefHeight="25.0" prefWidth="58.0" />
+      <JFXTextField fx:id="niTF" layoutX="55.0" layoutY="62.0" prefHeight="25.0" prefWidth="58.0" />
+      <JFXButton fx:id="borrarBT" layoutX="230.0" layoutY="121.0" onAction="#borrarpulsado" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #CBBEB5;" text="Borrar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="añadirBT" layoutX="111.0" layoutY="121.0" onAction="#anadirpulsado" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #CBBEB5;" text="Añadir">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <TableView fx:id="Tabla" layoutY="229.0" prefHeight="273.0" prefWidth="408.0" style="-fx-background-color: #F0F8FF;">
+         <columns>
+            <TableColumn fx:id="niCL" editable="false" prefWidth="85.0" text="Nodo i" />
+            <TableColumn fx:id="njCL" editable="false" prefWidth="90.0" text="Nodo j" />
+            <TableColumn fx:id="elasticidadCL1" editable="false" prefWidth="137.0" text="E" />
+            <TableColumn fx:id="areaCL11" editable="false" prefWidth="95.0" text="A" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="163.0" layoutY="177.0" onAction="#guardarpulsado" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #CBBEB5;" text="Guardar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
